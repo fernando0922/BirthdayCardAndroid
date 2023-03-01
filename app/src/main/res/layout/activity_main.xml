@@ -4,44 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/back_ground"
+    >
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:importantForAccessibility="no"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textColor="@color/teal_200"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp"
+            />
+
+        <EditText
+            android:id="@+id/other_name"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:hint="@string/other_name"
+            app:layout_constraintTop_toTopOf="@id/title"
+            android:layout_marginTop="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/teal_200"
+            android:textColorHint="@color/white"
+            android:fontFamily="casual"
+            android:inputType="text"
+            android:autofillHints="name"
+            />
+
+
+
+    <EditText
+        android:id="@+id/your_name"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:hint="@string/your_name"
+        app:layout_constraintTop_toBottomOf="@id/other_name"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/androidparty" />
+        android:textColor="@color/teal_200"
+        android:textColorHint="@color/white"
+        android:fontFamily="casual"
+        android:inputType="text"
+        android:autofillHints="name"
+        />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-light"
-        android:text="@string/happy_birthday_text"
-        android:textColor="@android:color/black"
-        android:textSize="48sp"
+    <Button
+        android:id="@+id/go"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="@string/go"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="sans-serif-light"
-        android:text="@string/from"
-        android:textColor="@android:color/black"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/your_name"
+        android:textColor="@color/back_ground"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginTop="40dp"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
