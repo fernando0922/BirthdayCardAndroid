@@ -3,8 +3,8 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
-import org.w3c.dom.Text
+import com.google.android.material.snackbar.BaseTransientBottomBar
+import com.google.android.material.snackbar.Snackbar
 
 class CardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +20,10 @@ class CardActivity : AppCompatActivity() {
         birthdayMessage.text = "${this.getString(R.string.happy_birthday_text)}$otherName!!"
         fromMessage.text = "${this.getString(R.string.from)}$yourName."
 
-
+        Snackbar.make(
+            findViewById(R.id.cardCoordinatorLayout),
+            R.string.share_information,
+            6000
+        ).setBackgroundTint(this.getColor(R.color.back_ground)).show()
     }
 }

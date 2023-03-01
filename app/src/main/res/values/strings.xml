@@ -6,4 +6,6 @@
     <string name="other_name">Birthday Person Name</string>
     <string name="your_name">Your Name</string>
     <string name="go">GO</string>
+    <string name="share_information"><![CDATA[Tap On Cake & Share Birthday Card]]></string>
+    <string name="fill_fildes">Kindly Fill All Fields</string>
 </resources>

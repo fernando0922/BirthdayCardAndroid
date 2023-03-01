@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +25,11 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra(YOUR_NAME,yourName.text.toString())
                 startActivity(intent)
             }else {
-                Toast.makeText(this, "Kindly Fill All Fields", Toast.LENGTH_LONG).show()
+                Snackbar.make(
+                    findViewById(R.id.mainCoordinatorLayout),
+                    R.string.fill_fildes,
+                    Snackbar.LENGTH_LONG
+                ).setBackgroundTint(this.getColor(R.color.teal_700)).show()
             }
         }
 
